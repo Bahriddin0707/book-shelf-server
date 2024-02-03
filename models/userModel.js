@@ -31,7 +31,7 @@ userSchema.statics.signup = async function (
   }
 
   if (!validator.isEmail(email)) {
-    throw Error("Invalid Email");
+    throw new Error("Invalid Email");
   }
 
   if (!validator.isStrongPassword(password)) {
